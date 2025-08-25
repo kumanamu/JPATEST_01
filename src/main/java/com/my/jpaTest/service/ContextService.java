@@ -42,4 +42,21 @@ public class ContextService {
         em.persist(karina);
         em.flush();
     }
+
+    public void dirtyCheckingTest(){
+        //조회
+        Member c = em.find(Member.class, "karina");
+        //수정(영속성영역에 가져온 카리나 정보 수정)
+        //setter만으로 수정
+        c.setName("까리나입니다");
+    }
+
+    public void deletemember(){
+        Member jin = em.find(Member.class, "jin");
+        em.remove(jin);
+    }
+
+
+
+
 }
