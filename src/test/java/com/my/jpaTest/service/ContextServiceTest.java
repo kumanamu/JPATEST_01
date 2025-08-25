@@ -67,5 +67,4 @@ class ContextServiceTest {
         contextService.deletemember();
     }
 
-
 }
